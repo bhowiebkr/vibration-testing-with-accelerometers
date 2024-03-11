@@ -161,7 +161,7 @@ def graph_data(data):
     rpm, x, y, a = graph_final()
 
     # X-Axis
-    ax1 = plt.subplot(1, 1, 1)
+    ax1 = plt.subplot(3, 1, 1)
     plt.title("2.2kw spindle with MPU-6050 accelerometer: (vibration magnitude/RPM)")
     plt.xticks(rpm[::20], rotation="vertical")
     plt.imshow(
@@ -177,7 +177,6 @@ def graph_data(data):
     ax1.axes.xaxis.set_ticklabels([])
     ax1.grid(True, linestyle=":", axis="x")
     plt.ylabel("X-Axis")
-    plt.show()
 
     # Y-Axis
     ax2 = plt.subplot(3, 1, 2, sharex=ax1)
